@@ -1,2 +1,3 @@
-This file contains the code for Qr generation.
-You can set any link to the QR and when you scan the QR, You will be redirected to that link.
+This repo contains two files i.e QR-Generation and QR-Reader.
+As from name you can guess QR-Generator.py generates the QR-Code.
+and QR-Reader reads an QR-Code
