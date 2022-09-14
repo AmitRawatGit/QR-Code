@@ -10,9 +10,12 @@ import pyqrcode  # make sure to install "pyqrcode" -- "pip install pyqrcode"
 # dataUrl = "https://www.linkedin.com/in/amitcoder/"
 
 dataUrl = input("Enter the link : ")  # take input as a string, the string should be a link that the QR-Code will redirect you to.
+if dataUrl != "":
+    qr = pyqrcode.create(dataUrl)  # This line will create QR using "dataUrl"
+   
+    qr.png("QR-Code.png", scale=5)  # QR will be generated in the form of image ,# scale is used for the size of the QR-code
 
-qr = pyqrcode.create(dataUrl)  # This line will create QR using "dataUrl"
-
-qr.png("QR-Code.png", scale=5)   # QR will be generated in the form of image ,# scale is used for the size of the QR-code
-
-print("QR Generated Successfully")
+    print("QR Generated Successfully")
+else:
+    print('Error : "Data can not be empty"')
+    print("Please enter valid and non empty data")
